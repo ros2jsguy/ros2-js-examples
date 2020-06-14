@@ -11,7 +11,7 @@ async function main() {
     await rclnodejs.init();
 
     // create a node and subscription for topic: msg'
-    let node = rclnodejs.createNode('ros2js_examples_node_subscriber'); 
+    let node = rclnodejs.createNode('node_subscriber', 'ros2_js_examples'); 
     let subscriber = node.createSubscription('std_msgs/msg/String', 'msg', undefined, 
       (msg: rclnodejs.Message) => {
         console.log('msg: ', (msg as rclnodejs.std_msgs.msg.String).data);
