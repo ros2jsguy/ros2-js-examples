@@ -11,7 +11,7 @@ async function main() {
     await rclnodejs.init();
 
     // create node and generic message publisher
-    let node = rclnodejs.createNode('ros2js_examples_node_publisher'); 
+    let node = rclnodejs.createNode('node_publisher', 'ros2_js_examples'); 
     let publisher = node.createPublisher('std_msgs/msg/String', 'msg');
 
     rclnodejs.spin(node);
