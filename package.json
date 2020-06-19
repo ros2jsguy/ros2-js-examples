@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "rclnodejs": "^0.14.0"
+    "rclnodejs": "^0.14.1"
   },
   "devDependencies": {
     "@types/node": "^14.0.12",

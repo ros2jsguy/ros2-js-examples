@@ -4,10 +4,10 @@
 
 
 import * as rclnodejs from 'rclnodejs';
-import { LaserScanPublisher } from '../example3/laserscan-publisher';
+import { LaserScanPublisher } from './laserscan-publisher';
 
 /**
- * The main workflow for generating and publishing ROS2 LaserScan messages.
+ * The main entry-pt for generating and publishing ROS2 LaserScan messages.
  */
 async function main() {
 
