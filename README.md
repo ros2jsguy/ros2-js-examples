@@ -34,11 +34,7 @@ This may take 1-2 minutes to complete as the rclnodejs package must be compiled 
 npm run build
 ```
 
-Step-4 Run examples
+### Step-4 Run examples
 Each src/example* folder includes a README that describes the example and provides details for building and running the example.
 
 
-## Future Plans
-Some upcoming enhancements include:
-* Externalize parameters for customizing the grid size, resolution and rate (tick hz) of evolution.
-* Detect steady states scenarios.
