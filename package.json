@@ -1,19 +1,34 @@
 {
-  "name": "ros2js-examples",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ros2-js-examples",
+  "version": "0.1.0",
+  "description": "ROS2 examples for JavaScript/TypeScript Developers",
   "main": "index.js",
   "scripts": {
-    "build": "tsc --watch"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "example1": "node dist/example1/node-publisher.js",
+    "example2": "node dist/example2/node-subscriber.js",
+    "example3": "npm run laserscan-publisher",
+    "example4": "npm run game-of-life",
+
+    "laserscan-publisher": "run-p laserscan-publisher-node laserscan-publisher-rviz2",
+    "laserscan-publisher-node": "node dist/example3/index.js",
+    "laserscan-publisher-rviz2": "rviz2 -d src/example3/laserscan.rviz",
+
+    "game-of-life": "run-p game-of-life-node game-of-life-rviz2",
+    "game-of-life-node": "node dist/example4/index.js",
+    "game-of-life-rviz2": "rviz2 -d src/example4/game-of-life.rviz"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["ros2", "javascript", "typescript", "rclnodejs", 
+               "robot", "robot operating system"],
+  "author": "ros2jsguy@gmail.com",
   "license": "ISC",
   "dependencies": {
     "rclnodejs": "^0.14.1"
   },
   "devDependencies": {
     "@types/node": "^14.0.12",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "npm-run-all": "^4.1.5"
   }
 }

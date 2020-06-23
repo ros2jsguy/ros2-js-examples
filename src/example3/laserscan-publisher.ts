@@ -21,7 +21,7 @@ export class LaserScanPublisher {
    * @param node - The node that to which this publisher belongs.
    * @param topic - The topic name to which laserScan msgs will be published.
    */
-  constructor(public readonly node: rclnodejs.Node, public readonly topic = 'laser_frame') {
+  constructor(public readonly node: rclnodejs.Node, public readonly topic = 'laserscan') {
     this.publisher = node.createPublisher('sensor_msgs/msg/LaserScan', topic);
   }
 
@@ -65,7 +65,7 @@ export class LaserScanPublisher {
     let laserScanMsg = new (rclnodejs.require('sensor_msgs/msg/LaserScan'));
 
     // configure msg header 
-    laserScanMsg.header.frame_id = 'laser_frame';
+    laserScanMsg.header.frame_id = 'laserscan_frame';
     laserScanMsg.header.stamp = this.node.now().toMsg();
 
     // generate range and intensity data

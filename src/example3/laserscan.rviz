@@ -10,6 +10,7 @@ Panels:
         - /Axes1
         - /LaserScan1
         - /LaserScan1/Status1
+        - /LaserScan1/Topic1
       Splitter Ratio: 0.41333332657814026
     Tree Height: 477
   - Class: rviz_common/Selection
@@ -79,17 +80,17 @@ Visualization Manager:
       Style: Spheres
       Topic:
         Depth: 5
-        Durability Policy: Volatile
+        Durability Policy: System Default
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /ros2_js_examples/laser_frame
+        Value: /ros2_js_examples/laserscan
       Use Fixed Frame: true
       Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
     Background Color: 238; 238; 236
-    Fixed Frame: laser_frame
+    Fixed Frame: laserscan_frame
     Frame Rate: 30
   Name: root
   Tools:
@@ -144,10 +145,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6703981757164001
+      Pitch: 0.5953980684280396
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.4835896492004395
+      Yaw: 5.338590621948242
     Saved: ~
 Window Geometry:
   Displays:
@@ -163,5 +164,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1460
-  X: 113
-  Y: 124
+  X: 192
+  Y: 80
