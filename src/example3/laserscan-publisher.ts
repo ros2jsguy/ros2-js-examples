@@ -71,7 +71,6 @@ export class LaserScanPublisher {
     // generate range and intensity data
     let sample_cnt = 180;
     let ranges = new Array(sample_cnt).fill(range);
-    let intensities = new Array(sample_cnt).fill(1.0);
 
     // configure msg data
     laserScanMsg.angle_min = 0;
@@ -82,7 +81,6 @@ export class LaserScanPublisher {
     laserScanMsg.range_min = range - 1;
     laserScanMsg.range_max = range + 1;
     laserScanMsg.ranges = ranges;
-    laserScanMsg.intensities = intensities;
 
     return laserScanMsg;
   }

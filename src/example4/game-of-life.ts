@@ -9,8 +9,8 @@ const RESOLUTION = 0.2;
 const TICK_LEN = 500;
 
 // cell states
-const ALIVE = 1.0;
-const DEAD = -1.0;
+const ALIVE = 100;
+const DEAD = 0;
 
 /**
  * Implements Conway's Game of Life (cellular automata) using
@@ -153,19 +153,19 @@ export class GameOfLife {
     let total = 0;
     
     //search top row
-    total += this.isCellAlive(row-1,column-1) ? ALIVE : 0;
-    total += this.isCellAlive(row-1,column) ? ALIVE : 0;
-    total += this.isCellAlive(row-1,column+1) ? ALIVE : 0;
+    total += this.isCellAlive(row-1,column-1) ? 1 : 0;
+    total += this.isCellAlive(row-1,column) ? 1 : 0;
+    total += this.isCellAlive(row-1,column+1) ? 1 : 0;
 
     //search same row
-    total += this.isCellAlive(row,column-1) ? ALIVE : 0;
-    total += this.isCellAlive(row,column+1) ? ALIVE : 0;
+    total += this.isCellAlive(row,column-1) ? 1 : 0;
+    total += this.isCellAlive(row,column+1) ? 1 : 0;
 
     //search top row
-    total += this.isCellAlive(row+1,column-1) ? ALIVE : 0;
-    total += this.isCellAlive(row+1,column) ? ALIVE : 0;
-    total += this.isCellAlive(row+1,column+1) ? ALIVE : 0;
-
+    total += this.isCellAlive(row+1,column-1) ? 1 : 0;
+    total += this.isCellAlive(row+1,column) ? 1 : 0;
+    total += this.isCellAlive(row+1,column+1) ? 1 : 0;
+//console.log('alive cnt:', total);
     return total;
   }
 

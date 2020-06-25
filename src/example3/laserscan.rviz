@@ -9,7 +9,6 @@ Panels:
         - /Grid1
         - /Axes1
         - /LaserScan1
-        - /LaserScan1/Status1
         - /LaserScan1/Topic1
       Splitter Ratio: 0.41333332657814026
     Tree Height: 477
@@ -63,8 +62,8 @@ Visualization Manager:
       Axis: Z
       Channel Name: intensity
       Class: rviz_default_plugins/LaserScan
-      Color: 255; 255; 255
-      Color Transformer: Intensity
+      Color: 114; 159; 207
+      Color Transformer: FlatColor
       Decay Time: 0
       Enabled: true
       Invert Rainbow: true
@@ -164,5 +163,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1460
-  X: 192
-  Y: 80
+  X: 190
+  Y: 106
